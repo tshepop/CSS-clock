@@ -1,0 +1,133 @@
+h1 {
+	color: white;
+	font-family: cursive;
+	padding-bottom: 5px;
+	text-align: center;
+	text-shadow: 1px 1px 2px black, 0 0 1em #52E396, 0 0 0.2em #52E396;
+	font-size: 2.5em;
+}
+
+p {
+	
+}
+
+#clock {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border: 35px ridge #52E396;
+	box-shadow: inset 20px 15px 5px gray, 20px 15px 5px gray;
+	margin: 90px auto;
+	border-radius: 50%;
+	padding-top: 5px;
+	margin-top: 5px;
+}
+
+#tophour {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 186px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#bottomhour {
+	position: absolute;
+	margin-top: 360px;
+	margin-left: 186px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#pasthour {
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 360px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#beforehour {
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 10px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#hour {
+	position: absolute;
+	width: 11px;
+	height: 100px;
+	background-color: black;
+	margin-top: 100px;
+	margin-left: 200px;
+	animation-name: clock;
+	animation-duration: 2400s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#minutes {
+	position: absolute;
+	width: 9px;
+	height: 150px;
+	background-color: black;
+	margin-top: 50px;
+	margin-left: 200px;
+	animation-name: minutes;
+	animation-duration: 120s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#seconds {
+	position: absolute;
+	width: 5px;
+	height: 170px;
+	background-color: gray;
+	margin-top: 30px;
+	margin-left: 200px;
+	animation-name: seconds;
+	animation-duration: 60s;
+	
+	animation-timing-function: steps(59, start);
+	animation-iteration-count: infinite;
+}
+
+@keyframes clock {
+	0% {
+		transform: rotate(0);
+		transform-origin: center bottom;
+		
+		
+	}
+	100% {
+		transform: rotate(360deg);
+		transform-origin: center bottom;
+		
+	}
+}
+
+@keyframes minutes {
+	0% {
+		transform: rotate(0);
+		transform-origin: center bottom;
+	}
+	100% {
+		transform: rotate(360deg);
+		transform-origin: center bottom;
+		
+	}
+}
+
+@keyframes seconds {
+	0% {
+		transform: rotate(0);
+		transform-origin: center bottom;
+	}
+	100% {
+		transform: rotate(360deg);
+		transform-origin: center bottom;
+	}
+}
